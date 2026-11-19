@@ -1,0 +1,107 @@
+.dash-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 3vw, 1.75rem);
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dash-header__menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border-strong);
+  color: var(--color-primary);
+  font-size: 1.2rem;
+}
+
+.dash-header__menu:hover {
+  background-color: var(--color-primary-soft);
+}
+
+.dash-header__titles {
+  min-width: 0;
+}
+
+.dash-header__section {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.dash-header__welcome {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.dash-header__welcome strong {
+  color: var(--color-text);
+}
+
+.dash-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-left: auto;
+}
+
+.dash-header__avatar {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.dash-header__logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.95rem;
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.dash-header__logout svg {
+  font-size: 1.05rem;
+}
+
+.dash-header__logout:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+@media (max-width: 900px) {
+  .dash-header__menu {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .dash-header__logout span {
+    display: none;
+  }
+
+  .dash-header__logout {
+    padding: 0.5rem;
+  }
+
+  .dash-header__welcome {
+    font-size: var(--text-xs);
+  }
+}
